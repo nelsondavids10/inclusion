@@ -8,5 +8,5 @@ import lombok.Data;
 @Builder
 @AllArgsConstructor
 public class CalculatorResponse {
-    private int resultado;
+    private int maxInteger;
 }
