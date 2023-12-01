@@ -39,7 +39,7 @@ OUTPUTS:
 
 ## Installation
 
-Run the following command to install the necessary dependencies of the maven project
+Run the following command to install the necessary dependencies of the maven project and run de Unitary Test
 
 ```bash
 mvn clean install
