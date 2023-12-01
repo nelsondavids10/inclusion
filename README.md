@@ -42,7 +42,7 @@ OUTPUTS:
 Run the following command to install the necessary dependencies of the maven project
 
 ```bash
-npm clean install
+mvn clean install
 ```
 
 Now run this command to launch the application
