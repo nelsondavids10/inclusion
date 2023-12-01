@@ -1,7 +1,9 @@
 package com.inclusion.calculator;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.inclusion.calculator.controller.CalculatorController;
+import com.inclusion.calculator.model.CalculatorRequest;
 import com.inclusion.calculator.model.CalculatorResponse;
 import com.inclusion.calculator.service.CalculatorService;
 import org.junit.jupiter.api.Test;
@@ -22,9 +24,10 @@ class CalculatorApplicationTests {
 
 	@Autowired
 	private MockMvc mockMvc;
-
 	@MockBean
 	private CalculatorService calculatorService;
+    @Autowired
+    private ObjectMapper objectMapper;
 
 	@Test
 	void testCalculate() throws Exception {
@@ -37,6 +40,25 @@ class CalculatorApplicationTests {
 				.andExpect(status().isOk())
                 .andExpect(content().json(new ObjectMapper().writeValueAsString(new CalculatorResponse(12339))));
 
+    }
+
+    @Test
+    void testMaxIntegerPost() throws Exception, JsonProcessingException {
+        // Mocking the service response
+        when(calculatorService.calculate(anyInt(), anyInt(), anyInt())).thenReturn(12339);
+
+        // Creating a sample request
+        CalculatorRequest request = new CalculatorRequest();
+        request.setX(7);
+        request.setY(5);
+        request.setN(12345);
+
+        // Performing the POST request
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/vi/calculator/max-integer")
+                .contentType("application/json")
+                .content(objectMapper.writeValueAsString(request)))
+            .andExpect(status().isOk())
+            .andExpect(content().json(objectMapper.writeValueAsString(new CalculatorResponse(12339))));
     }
 
 }
