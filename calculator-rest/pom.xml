@@ -11,7 +11,7 @@
 	<groupId>com.inclusion.calculadora</groupId>
 	<artifactId>calculator-rest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>calculator-rest</name>
 	<description>Inclusion Test</description>
 	<properties>
