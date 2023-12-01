@@ -5,13 +5,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.inclusion.calculator.controller.CalculatorController;
 import com.inclusion.calculator.model.CalculatorRequest;
 import com.inclusion.calculator.model.CalculatorResponse;
-import com.inclusion.calculator.service.CalculatorService;
+import com.inclusion.calculator.service.impl.CalculatorServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import static org.mockito.ArgumentMatchers.anyInt;
@@ -25,7 +24,7 @@ class CalculatorApplicationTests {
 	@Autowired
 	private MockMvc mockMvc;
 	@MockBean
-	private CalculatorService calculatorService;
+	private CalculatorServiceImpl calculatorService;
     @Autowired
     private ObjectMapper objectMapper;
 
