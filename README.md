@@ -39,13 +39,13 @@ OUTPUTS:
 
 ## Installation
 
-Run the following command to install the necessary dependencies of the maven project and run de Unitary Test
+Run the following command into the path: "/calculator-rest" to install the necessary dependencies of the maven project and run de Unitary Test
 
 ```bash
 mvn clean install
 ```
 
-Now run this command to launch the application
+Now run this command into the path: "/calculator-rest" to launch the application
 
 ```bash
 mvn spring-boot:run
