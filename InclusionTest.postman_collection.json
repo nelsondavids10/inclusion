@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "9d601946-75f9-424a-a34e-7a058e04c823",
+		"name": "InclusionTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29717067"
+	},
+	"item": [
+		{
+			"name": "getCalculate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/vi/calculator/max-integer?x=2&y=0&n=999999999",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vi",
+						"calculator",
+						"max-integer"
+					],
+					"query": [
+						{
+							"key": "x",
+							"value": "2"
+						},
+						{
+							"key": "y",
+							"value": "0"
+						},
+						{
+							"key": "n",
+							"value": "999999999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postCalculate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"x\":7,\r\n    \"y\":5,\r\n    \"n\":12345\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/vi/calculator/max-integer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vi",
+						"calculator",
+						"max-integer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
