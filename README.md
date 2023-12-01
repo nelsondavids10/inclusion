@@ -67,5 +67,5 @@ You can test the GET and POST services of the application using postman as follo
 
 ![image](https://github.com/nelsondavids10/inclusion/assets/64111407/4a308aa2-5c43-442b-9a44-657658c82edf)
 
-You can import the postman collection from the file: InclusionTest.postman_collection.json
+You can import the postman collection from the file: InclusionTest.postman_collection.json: https://github.com/nelsondavids10/inclusion/blob/develop/InclusionTest.postman_collection.json
 
